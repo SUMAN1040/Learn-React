@@ -23,14 +23,27 @@ export default function TextForm(props) {
   //Inverse Handler
   const handleInverseClick = () => {
     let newText = "";
-    for(let i = 0; i < text.length; i++){
-        if(text[i] === text[i].toUpperCase()){
-            newText += text[i].toLowerCase();
-        }else{
-            newText += text[i].toUpperCase();
-        }
+    for (let i = 0; i < text.length; i++) {
+      if (text[i] === text[i].toUpperCase()) {
+        newText += text[i].toLowerCase();
+      } else {
+        newText += text[i].toUpperCase();
+      }
     }
     setText(newText);
+  };
+
+  //Copy Text Handler
+  const handleCopy = () => {
+    let text = document.getElementById("myBox");
+    text.select();
+    navigator.clipboard.writeText(text.value);
+  };
+
+  //Remove Space Handler
+  const handleRemoveSpace = () => {
+    let newText = text.split(/[ ]+/);
+    setText(newText.join(" "));
   };
 
   const handleOnChange = (event) => {
@@ -63,6 +76,12 @@ export default function TextForm(props) {
         </button>
         <button className="btn btn-primary mx-2" onClick={handleInverseClick}>
           Inverse Text
+        </button>
+        <button className="btn btn-primary mx-2" onClick={handleCopy}>
+          Copy Text
+        </button>
+        <button className="btn btn-primary mx-2" onClick={handleRemoveSpace}>
+          Remove Space
         </button>
       </div>
 
