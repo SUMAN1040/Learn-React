@@ -24,5 +24,3 @@ document.addEventListener(`click`, function click() {
   let con = confirm("Are you sure?");
   console.log(con);
 });
-
-
