@@ -6,12 +6,14 @@ export default function TextForm(props) {
     console.log("Uppercase button was clicked" + text);
     let newText = text.toUpperCase();
     setText(newText);
+    props.showAlert("Converted to Uppercase", "success");
   };
 
   //Lowercase Handler
   const handleLowClick = () => {
     let newText = text.toLowerCase();
     setText(newText);
+    props.showAlert("Converted to Lowercase", "success");
   };
 
   //Clear Text Handler
@@ -102,7 +104,11 @@ export default function TextForm(props) {
         </p>
         <p>{0.008 * text.split(" ").length} Minutes Read</p>
         <h2 className="my-2">Preview</h2>
-        <p>{text.length>0?text:"Enter something in the textbox above to preview it here"}</p>
+        <p>
+          {text.length > 0
+            ? text
+            : "Enter something in the textbox above to preview it here"}
+        </p>
       </div>
     </>
   );

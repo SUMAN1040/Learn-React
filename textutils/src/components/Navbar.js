@@ -46,7 +46,21 @@ export default function Navbar(props) {
             </button>
           </form> */}
 
-          <div className={`form-check form-switch text-${props.mode === 'light' ? 'dark' : 'light'}`}>
+          {/* Theme toggle system */}
+          <button type="button" class="btn btn-outline-danger mx-1">
+            Red
+          </button>
+          <button type="button" class="btn btn-outline-warning mx-1">
+            Yellow
+          </button>
+          <button type="button" class="btn btn-outline-success mx-2">
+            Green
+          </button>
+
+          {/* Toggle button for dark / Light */}
+          <div
+            className={`form-check form-switch text-${props.mode === "light" ? "dark" : "light"}`}
+          >
             <input
               className="form-check-input"
               type="checkbox"
