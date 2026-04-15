@@ -2,270 +2,22 @@ import React, { Component } from "react";
 import NewsItem from "./NewsItem";
 
 export class News extends Component {
-  articles = [
-    {
-      source: {
-        id: "the-washington-post",
-        name: "The Washington Post",
-      },
-      author: "Júlia Ledur, Dylan Moriarty",
-      title:
-        "How geography powers Iran’s grip on the Strait of Hormuz, despite U.S. blockade - The Washington Post",
-      description:
-        "Even with a U.S. blockage, geography gives Iran an edge in the Strait of Hormuz, shaping control of a vital global chokepoint.",
-      url: "https://www.washingtonpost.com/world/interactive/2026/hormuz-strait-control-blockade/",
-      urlToImage:
-        "https://www.washingtonpost.com/wp-apps/imrs.php?src=https://cloudfront-us-east-1.images.arcpublishing.com/wapo/BHY3NQJRRBDNBE7P3A67US5HGQ.jpg&w=1200",
-      publishedAt: "2026-04-14T16:01:53Z",
-      content:
-        "Shipping traffic through the Strait of Hormuz remains constrained a week after the United States and Iran said they would facilitate vessel passage under a two-week ceasefire agreement. Instead, tens… [+6879 chars]",
-    },
-    {
-      source: {
-        id: null,
-        name: "NPR",
-      },
-      author: "Kat Lonsdorf",
-      title:
-        "Israel and Lebanon set to meet for first direct talks in more than 30 years - NPR",
-      description:
-        "An official briefed on Israel's strategy for the talks described Tuesday's meeting as \"preparatory\" and aimed at laying out a framework for future negotiations.",
-      url: "https://www.npr.org/2026/04/14/nx-s1-5784551/lebanon-israel-talks",
-      urlToImage:
-        "https://npr.brightspotcdn.com/dims3/default/strip/false/crop/1024x576+0+54/resize/1400/quality/85/format/jpeg/?url=http%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2Fb2%2Fe3%2F6ef4b2484287b6664cba14c185b6%2Fgettyimages-2270674011.jpg",
-      publishedAt: "2026-04-14T15:38:26Z",
-      content:
-        "BEIRUT, TEL AVIV and WASHINGTON Lebanon and Israel are holding their first direct diplomatic talks in more than 30 years in Washington, D.C. The talks are aimed at preparing negotiations to resolve I… [+5249 chars]",
-    },
-    {
-      source: {
-        id: "cnn",
-        name: "CNN",
-      },
-      author: "Meg Tirrell",
-      title:
-        "Some people don’t lose weight with GLP-1s. Evidence is building that the drugs are helping anyway - CNN",
-      description:
-        "The majority of people who start taking GLP-1 medicines with the hope of losing weight, the drugs can quiet cravings and help them shed stubborn pounds. But research is also continuing to reveal GLP-1 medicines’ benefits independent of weight loss — even if p…",
-      url: "https://www.cnn.com/2026/04/14/health/glp1-liver-health-benefits-weight-loss",
-      urlToImage:
-        "https://media.cnn.com/api/v1/images/stellar/prod/ap25031492833603.jpg?c=16x9&q=w_800,c_fill",
-      publishedAt: "2026-04-14T15:00:55Z",
-      content:
-        "For the majority of people who start taking GLP-1 medicines with the hope of losing weight, the drugs can feel almost miraculous: Cravings are quieted. Exercise can become easier and more fun. Pounds… [+5956 chars]",
-    },
-    {
-      source: {
-        id: "cnn",
-        name: "CNN",
-      },
-      author: "Devan Cole",
-      title:
-        "Court orders DC judge to end criminal contempt inquiry into Trump officials involved in deportation flights - CNN",
-      description:
-        "A divided federal appeals court on Tuesday ordered US District Judge James Boasberg to end his efforts to hold Trump administration officials accountable for flouting his orders in a high-stakes immigration case.",
-      url: "https://www.cnn.com/2026/04/14/politics/court-criminal-contempt-trump-officials-deportation",
-      urlToImage:
-        "https://media.cnn.com/api/v1/images/stellar/prod/ap25093587208419a.JPG?c=16x9&q=w_800,c_fill",
-      publishedAt: "2026-04-14T14:57:34Z",
-      content:
-        "A divided federal appeals court on Tuesday ordered US District Judge James Boasberg to end his efforts to hold Trump administration officials accountable for flouting his orders in a high-stakes immi… [+6251 chars]",
-    },
-    {
-      source: {
-        id: null,
-        name: "Porsche.com",
-      },
-      author: null,
-      title:
-        "Lightweight cabriolet with a high-revving naturally aspirated engine and manual transmission - Porsche Newsroom",
-      description:
-        "The Porsche GT family welcomes a particularly exciting new member. The 911 GT3 S/C combines a range of ‘driver's car’ qualities that have already delighted customers of the limited-edition 911 Speedster and 911 S/T models.",
-      url: "https://newsroom.porsche.com/en/2026/products/porsche-gt3-sc-world-premiere-lightweight-cabriolet-42136.html",
-      urlToImage:
-        "https://porschepictures.flowcenter.de/pmdb/thumbnail.cgi?id=332395&w=700&h=467&crop=0&public=1&cs=e5ec90738d107497",
-      publishedAt: "2026-04-14T14:03:20Z",
-      content:
-        "<ul><li>911 GT3 available with a fully automatic convertible roof for the first time</li><li>4.0-litre six-cylinder boxer engine that revs to 9,000 rpm</li><li>Lightweight construction derived from t… [+12703 chars]",
-    },
-    {
-      source: {
-        id: "nbc-news",
-        name: "NBC News",
-      },
-      author: "Kaitlin Sullivan",
-      title:
-        "Ultraprocessed foods may hurt muscle health, study finds - NBC News",
-      description:
-        "Eating too much ultraprocessed food could take a toll on muscle health, according to new research published Tuesday in the journal Radiology.",
-      url: "https://www.nbcnews.com/health/health-news/link-ultraprocessed-foods-muscle-health-rcna331623",
-      urlToImage:
-        "https://media-cldnry.s-nbcnews.com/image/upload/t_nbcnews-fp-1200-630,f_auto,q_auto:best/rockcms/2026-04/260413-ultraprocessed-foods-gk-721090.jpg",
-      publishedAt: "2026-04-14T14:00:00Z",
-      content:
-        "Eating too much ultraprocessed food could take a toll on muscle health, according to new research published Tuesday in the journal Radiology. \r\nSubscribe to read this story ad-free \r\nGet unlimited ac… [+4989 chars]",
-    },
-    {
-      source: {
-        id: null,
-        name: "NPR",
-      },
-      author: "The Associated Press",
-      title:
-        "Fuel protests have Ireland's government facing possible no-confidence vote - NPR",
-      description:
-        "The prime minister announced new tax cuts to try to end the crisis that began after the U.S.-Israel war on Iran led to the closure of the Strait of Hormuz. The government could face a no-confidence vote over its response to the fuel protests.",
-      url: "https://www.npr.org/2026/04/14/g-s1-117383/fuel-protests-have-irelands-government-facing-possible-no-confidence-vote",
-      urlToImage:
-        "https://npr.brightspotcdn.com/dims3/default/strip/false/crop/7690x4324+0+231/resize/1400/quality/85/format/jpeg/?url=http%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2F39%2Fdc%2Fc374f3f0433094a78eb48997663e%2Fap26101489425803.jpg",
-      publishedAt: "2026-04-14T13:56:41Z",
-      content:
-        "LONDON Ireland 's government could face a no-confidence vote Tuesday in Parliament over how it has handled a week of fuel protests that blocked access to oil supplies and a major port and caused mass… [+2789 chars]",
-    },
-    {
-      source: {
-        id: null,
-        name: "Variety",
-      },
-      author: "Ellise Shafer",
-      title:
-        "Lena Dunham: Adam Driver 'Verbally Aggressive' on 'Girls,' Threw Chair - Variety",
-      description:
-        'In her new memoir "Famesick," Lena Dunham reflects on her hit show "Girls" and the complex relationship she had with co-star Adam Driver.',
-      url: "https://variety.com/2026/tv/global/lena-dunham-adam-driver-verbally-aggressive-girls-threw-chair-1236721046/",
-      urlToImage:
-        "https://variety.com/wp-content/uploads/2026/04/lena-adam-copy.jpg?w=1000&h=563&crop=1",
-      publishedAt: "2026-04-14T13:51:00Z",
-      content:
-        "In her new memoir “Famesick,” Lena Dunham reflects on her hit show “Girls” and the complex relationship she had with co-star Adam Driver both on and off set.\r\n“Girls,” which ran on HBO from 2012 to 2… [+5942 chars]",
-    },
-    {
-      source: {
-        id: "associated-press",
-        name: "Associated Press",
-      },
-      author: "Nicole Winfield",
-      title:
-        "Pope Leo XIV in Algeria walks in footsteps of his spiritual father, St. Augustine - AP News",
-      description:
-        "Pope Leo XIV has walked in the footsteps of his spiritual father St. Augustine. He is making a pilgrimage to the archaeological ruins in Algeria where the fifth-century titan of early Christianity lived, died and wrote some of the most important works in West…",
-      url: "https://apnews.com/article/africa-pope-leo-augustine-aaa23d7ec2ec6f280d7f8e6e2ee6a916",
-      urlToImage:
-        "https://dims.apnews.com/dims4/default/8ad0054/2147483647/strip/true/crop/5601x3732+0+1/resize/980x653!/quality/90/?url=https%3A%2F%2Fassets.apnews.com%2Ff0%2Fee%2Fff9b534ccfd1fa0a0f5f82de724b%2F837f6e4df86a4f56b2e2450776bb75e6",
-      publishedAt: "2026-04-14T13:48:00Z",
-      content:
-        "ANNABA, Algeria (AP) Pope Leo XIV walked Tuesday in the footsteps of his spiritual father, St. Augustine, making a pilgrimage to the archaeological ruins in Algeria where the fifth-century titan of e… [+5280 chars]",
-    },
-    {
-      source: {
-        id: "entertainment-weekly",
-        name: "Entertainment Weekly",
-      },
-      author: "https://www.facebook.com/entertainmentweekly",
-      title:
-        "Lena Dunham admits to cheating on Jack Antonoff in her explosive new memoir - Entertainment Weekly",
-      description:
-        "Lena Dunham is opening up about engaging in infidelity toward the end of her relationship with Jack Antonoff in her explosive new memoir 'Famesick.'",
-      url: "https://ew.com/lena-dunham-admits-to-cheating-on-jack-antonoff-in-book-11949209",
-      urlToImage:
-        "https://ew.com/thmb/tX5-Hu62hPdk2eewutKOq9350Uw=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Jack-Antonoff-lena-dunham-041326-25b8c0cb84ee4a95af2eccf5c350f2bd.jpg",
-      publishedAt: "2026-04-14T13:28:27Z",
-      content:
-        "Lena Dunham is back to doing what she does best: telling the truth in stunning detail.\r\nThe celebrated and often controversial writer, filmmaker, and Girls mastermind is out with a new memoir, Famesi… [+4594 chars]",
-    },
-    {
-      source: {
-        id: null,
-        name: "CBS Sports",
-      },
-      author: "Jack Maloney",
-      title:
-        "2026 WNBA Draft results, grades for every first-round pick: Azzi Fudd goes No. 1, UCLA makes history - CBS Sports",
-      description:
-        "While Fudd became the second straight UConn star to go No. 1 to the Wings, UCLA stole the show with six of the first 18 picks",
-      url: "https://www.cbssports.com/wnba/news/2026-wnba-draft-updates-results-grades/live/",
-      urlToImage:
-        "https://sportshub.cbsistatic.com/i/r/2026/04/13/18c99713-3f69-485f-ad35-bbfbf05cb9d6/thumbnail/1200x675/f8885aa6f01cfe56aba739ad669ed0a2/fudd-first-pick-getty.png",
-      publishedAt: "2026-04-14T12:38:00Z",
-      content:
-        "The 2026 WNBA Draft is in the books, and for the second year in a row, the Dallas Wings selected a UConn guard with the No. 1 overall pick. This time around, it was Azzi Fudd, who will reunite with n… [+3953 chars]",
-    },
-    {
-      source: {
-        id: "cbs-news",
-        name: "CBS News",
-      },
-      author: "Cristian  Benavides, Mark  Osborne",
-      title:
-        'Brian Hooker, husband of woman missing in Bahamas: "I won\'t be able to stop looking" - CBS News',
-      description:
-        "Brian Hooker, whose wife disappeared during a nighttime boat ride​ in the Bahamas, said he wants to believe his wife is still alive and plans to go back out to look for her as soon as possible.",
-      url: "https://www.cbsnews.com/news/brian-hooker-missing-woman-bahamas-i-wont-be-able-to-stop-looking/",
-      urlToImage:
-        "https://assets1.cbsnewsstatic.com/hub/i/r/2026/04/14/f6ca9e61-38d9-45bb-93a9-a2185ab0284d/thumbnail/1200x630/d8c85902a56e9c5820715f7a84ee96bc/brian-hooker-interview.jpg",
-      publishedAt: "2026-04-14T12:33:00Z",
-      content:
-        "Brian Hooker, whose wife Lynette disappeared during a nighttime boat ride in the Bahamas, told CBS News he wants to believe his wife is still alive and plans to go back out to look for her as soon as… [+2231 chars]",
-    },
-    {
-      source: {
-        id: "fortune",
-        name: "Fortune",
-      },
-      author: "Munir Ahmed, Sam Metz, The Associated Press",
-      title:
-        "Trump’s leaky blockade: ship sneaks through and talks with Iran resume - Fortune",
-      description:
-        "Two Pakistani officials said the first talks were part of an ongoing diplomatic process rather than a one-off effort.",
-      url: "https://fortune.com/2026/04/14/trumps-leaky-blockade-ship-sneaks-through-and-talks-with-iran-resume/",
-      urlToImage:
-        "https://fortune.com/img-assets/wp-content/uploads/2026/04/AP26102802553726-e1776169248966.jpg?resize=1200,600",
-      publishedAt: "2026-04-14T12:20:00Z",
-      content:
-        "The standoff between the United States and Iran deepened Tuesday as the U.S. declared it had blockaded Irans ports, Tehran threatened to strike targets across the region, and Pakistan said it was rac… [+5663 chars]",
-    },
-    {
-      source: {
-        id: null,
-        name: "WSB Atlanta",
-      },
-      author: "WSBTV.com News Staff",
-      title:
-        "What was that bright streak in the sky this morning? It wasn’t a comet or meteor - WSB-TV",
-      description:
-        "Space X launched its 1,000th Starlink into low Earth orbit around 5:30 a.m. from Cape Canaveral Space Force Station. But people up and down the East Coast could see what’s called a “jellyfish” effect from the launch.",
-      url: "https://www.wsbtv.com/news/local/what-was-that-bright-streak-sky-this-morning-it-wasnt-comet-or-meteor/CMMQAH3MVBC3VPFNQ5V5P3PHPA/",
-      urlToImage:
-        "https://cmg-cmg-tv-10010-prod.cdn.arcpublishing.com/resizer/v2/https%3A%2F%2Fcloudfront-us-east-1.images.arcpublishing.com%2Fcmg%2F5F6546YHN5EI5C25A4MMNHSSNA.jpeg?auth=5f20c053c9daed5295d69428735fc7ffcfc33c9d7de404728c5a2d505dc3ec8a&width=1200&height=630&smart=true",
-      publishedAt: "2026-04-14T11:30:51Z",
-      content:
-        "JACKSON COUNTY, Ga. — Did you see a bright streak across the sky this morning? \r\nIt wasnt a comet or meteor. The latest Starlink launch was visible in parts of north Georgia. \r\n[DOWNLOAD: Free WSB-TV… [+923 chars]",
-    },
-    {
-      source: {
-        id: "axios",
-        name: "Axios",
-      },
-      author: "Kate Santaliz",
-      title: "Tony Gonzales announces plans to quit Congress early - Axios",
-      description:
-        '"There is a season for everything, and God has a plan for us all," Gonzales said.',
-      url: "https://www.axios.com/2026/04/13/tony-gonzales-resigns-congress-republican",
-      urlToImage:
-        "https://images.axios.com/gxXJDUFCyHkG6tkR8tt2e0Ew28o=/0x572:5688x3772/1366x768/2026/04/13/1776119578584.jpeg",
-      publishedAt: "2026-04-14T10:39:38Z",
-      content:
-        '<ul><li>"There is a season for everything, and God has a plan for us all. When Congress returns tomorrow, I will file my retirement from office. It has been my privilege to serve the great people of … [+1649 chars]',
-    },
-  ];
 
   constructor() {
     super();
-    console.log("Hello I am a constuctor from news component");
     this.state = {
-      articles: this.articles,
+      articles: [],
       loading: false,
     };
+  }
+
+  async componentDidMount() {
+    let url =
+      "https://newsapi.org/v2/top-headlines?country=us&apiKey=159e547674d44464a1d3db3557e60d77";
+    let data = await fetch(url);
+    let parsedData = await data.json();
+    console.log(parsedData);
+    this.setState({ articles: parsedData.articles});
   }
 
   render() {
@@ -273,19 +25,18 @@ export class News extends Component {
       <div className="container my-3">
         <h2>NewsMonkey - Top Headlines</h2>
         <div className="row">
-          <div className="col-md-4">
-            <NewsItem
-              title="myTitle"
-              description="myDesc"
-              imageUrl="https://porschepictures.flowcenter.de/pmdb/thumbnail.cgi?id=332395&w=700&h=467&crop=0&public=1&cs=e5ec90738d107497"
-            />
-          </div>
-          <div className="col-md-4">
-            <NewsItem title="myTitle" description="myDesc" imageUrl="" />
-          </div>
-          <div className="col-md-4">
-            <NewsItem title="myTitle" description="myDesc" />
-          </div>
+          {this.state.articles.map((element) => {
+            return (
+              <div className="col-md-4" key={element.url}>
+                <NewsItem
+                  title={element.title ? element.title.slice(0, 45): ""}
+                  description={element.description ? element.description.slice(0, 88): ""}
+                  imageUrl={element.urlToImage}
+                  newsUrl={element.url}
+                />
+              </div>
+            );
+          })}
         </div>
       </div>
     );

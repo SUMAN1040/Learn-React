@@ -1,18 +1,20 @@
 import React, { Component } from "react";
 
 export class NewsItem extends Component {
-
-
   render() {
     let { title, description, imageUrl, newsUrl } = this.props;
     return (
       <div className="my-3">
         <div className="card" style={{ width: "18rem" }}>
-          <img src={imageUrl} className="card-img-top" alt="..." />
+          <img src={!imageUrl ? "https://fortune.com/img-assets/wp-content/uploads/2026/04/AP26102802553726-e1776169248966.jpg?resize=1200,600" : imageUrl} className="card-img-top" alt="..." />
           <div className="card-body">
-            <h5 className="card-title">{title}</h5>
-            <p className="card-text">{description}</p>
-            <a href={newsUrl} className="btn btn-sm btn-primary">
+            <h5 className="card-title">{title}...</h5>
+            <p className="card-text">{description}...</p>
+            <a
+              href={newsUrl}
+              target="_blank"
+              className="btn btn-sm btn-primary"
+            >
               Read More
             </a>
           </div>
