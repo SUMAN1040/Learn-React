@@ -5,6 +5,8 @@ import About from "./components/About";
 import React, { useState } from "react";
 import Alert from "./components/Alert";
 
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
 function App() {
   const [mode, setMode] = useState("light"); //Whethere dark mood is enabled or not
   const [alert, setAlert] = useState(null);
@@ -34,22 +36,35 @@ function App() {
 
   return (
     <>
-      <Navbar
-        title="TextUtils"
-        aboutText="About"
-        mode={mode}
-        toggleMode={toggleMode}
-      />
-      <Alert alert={alert} />
-      {/* <Navbar/> */}
-      <div className="container my-5">
-        <TextForm
-          showAlert={showAlert}
-          heading="Enter your text to analyze"
+      <Router>
+        {/* Nav */}
+        <Navbar
+          title="TextUtils"
+          aboutText="About"
           mode={mode}
+          toggleMode={toggleMode}
         />
-        {/* <About/> */}
-      </div>
+
+        {/* Alert */}
+        <Alert alert={alert} />
+
+        {/* Content */}
+        <div className="container my-5">
+          <Routes>
+            <Route path="/about" element={<About />} />
+            <Route
+              path="/"
+              element={
+                <TextForm
+                  showAlert={showAlert}
+                  heading="Enter your text to analyze"
+                  mode={mode}
+                />
+              }
+            />
+          </Routes>
+        </div>
+      </Router>
     </>
   );
 }
