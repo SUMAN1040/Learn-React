@@ -48,15 +48,39 @@ export default function Navbar(props) {
           </form> */}
 
           {/* Theme toggle system / Red, Yellow, Green*/}
-          <button type="button" className="btn btn-outline-danger mx-1">
-            Red
-          </button>
-          <button type="button" className="btn btn-outline-warning mx-1">
-            Yellow
-          </button>
-          <button type="button" className="btn btn-outline-success mx-2">
-            Green
-          </button>
+          <div className="d-flex">
+            <div
+              className="bg-primary rounded mx-2"
+              onClick={() => {
+                props.toggleMode("primary");
+              }}
+              style={{ height: "30px", width: "30px", cursor: "pointer" }}
+            ></div>
+
+            <div
+              className="bg-success rounded mx-2"
+              onClick={() => {
+                props.toggleMode("success");
+              }}
+              style={{ height: "30px", width: "30px", cursor: "pointer" }}
+            ></div>
+
+            <div
+              className="bg-danger rounded mx-2"
+              onClick={() => {
+                props.toggleMode("danger");
+              }}
+              style={{ height: "30px", width: "30px", cursor: "pointer" }}
+            ></div>
+
+            <div
+              className="bg-warning rounded mx-2"
+              onClick={() => {
+                props.toggleMode("warning");
+              }}
+              style={{ height: "30px", width: "30px", cursor: "pointer" }}
+            ></div>
+          </div>
 
           {/* Toggle button for dark / Light */}
           <div
@@ -66,7 +90,9 @@ export default function Navbar(props) {
               className="form-check-input"
               type="checkbox"
               role="switch"
-              onClick={props.toggleMode}
+              onClick={() => {
+                props.toggleMode(null);
+              }}
               id="switchCheckDefault"
             />
             <label className="form-check-label" htmlFor="switchCheckDefault">
