@@ -47,13 +47,13 @@ export default function Navbar(props) {
           </form> */}
 
           {/* Theme toggle system */}
-          <button type="button" class="btn btn-outline-danger mx-1">
+          <button type="button" className="btn btn-outline-danger mx-1">
             Red
           </button>
-          <button type="button" class="btn btn-outline-warning mx-1">
+          <button type="button" className="btn btn-outline-warning mx-1">
             Yellow
           </button>
-          <button type="button" class="btn btn-outline-success mx-2">
+          <button type="button" className="btn btn-outline-success mx-2">
             Green
           </button>
 
