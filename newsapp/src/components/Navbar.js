@@ -2,7 +2,7 @@
 import React, { Component } from "react";
 
 export class Navbar extends Component {
-//   static propTypes = {};
+  //   static propTypes = {};
 
   render() {
     return (
@@ -36,6 +36,41 @@ export class Navbar extends Component {
                 <li className="nav-item">
                   <a className="nav-link" href="/about">
                     About
+                  </a>
+                </li>
+                <li className="nav-item">
+                  <a className="nav-link" href="/business">
+                    business
+                  </a>
+                </li>
+                <li className="nav-item">
+                  <a className="nav-link" href="/entertainment">
+                    entertainment
+                  </a>
+                </li>
+                <li className="nav-item">
+                  <a className="nav-link" href="/general">
+                    general
+                  </a>
+                </li>
+                <li className="nav-item">
+                  <a className="nav-link" href="/health">
+                    health
+                  </a>
+                </li>
+                <li className="nav-item">
+                  <a className="nav-link" href="/science">
+                    science
+                  </a>
+                </li>
+                <li className="nav-item">
+                  <a className="nav-link" href="/sports">
+                    sports
+                  </a>
+                </li>
+                <li className="nav-item">
+                  <a className="nav-link" href="/technology">
+                    technology
                   </a>
                 </li>
               </ul>
