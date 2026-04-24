@@ -70,7 +70,7 @@ export class News extends Component {
         <h2 className="text-center" style={{ margin: '30px 0px' }}>NewsMonkey - Top Headlines</h2>
         {this.state.loading && <Spinner />}
         <div className="row">
-          {!this.state.loading && this.state.articles.map((element) => {
+          {!this.state.loading && this.state.articles && this.state.articles.map((element) => {
             return (
               <div className="col-md-4" key={element.url}>
                 <NewsItem
